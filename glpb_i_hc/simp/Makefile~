@@ -1,0 +1,5 @@
+EXEC = glucose-hc-33p-1-1-100k
+DEPDIR    = mtl utils core
+MROOT = $(PWD)/..
+
+include $(MROOT)/mtl/template.mk
