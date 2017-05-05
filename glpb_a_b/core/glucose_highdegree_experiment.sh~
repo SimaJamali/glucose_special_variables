@@ -1,0 +1,13 @@
+#!/bin/bash
+
+for i in $(find $PWD/ -type f -name "*.cnf"); do
+        echo item: $i 
+
+	timeout 2500 python louvain.py $i > "$i.cmty"
+
+	echo "Community Done!!!"
+
+        timeout 4000 ./countbridgemvsids/core/countbridgemvsids "-cmty-file=$i.cmty" "-cnf-file=$i"  $i > "$i.txt"
+        echo "Experiment Done!!!"
+done
+

@@ -1,0 +1,4 @@
+EXEC      = Highdegree_m1.2
+DEPDIR    = mtl utils
+
+include $(MROOT)/mtl/template.mk
